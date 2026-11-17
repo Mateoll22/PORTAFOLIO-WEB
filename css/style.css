@@ -1,0 +1,80 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Un gris muy clarito y elegante */
+    color: #333; /* Texto gris oscuro */
+    line-height: 1.6;
+}
+
+/* Estilo del menú de navegación */
+header {
+    background-color: #1a1a1a; /* Negro oscuro */
+    padding: 1.2rem 0;
+}
+
+nav ul {
+    list-style: none; /* Quita puntos de la lista */
+    display: flex;    /* Pone los enlaces uno al lado del otro horizontalmente */
+    justify-content: center; /* Los centra en la pantalla */
+    gap: 30px; /* Espacio entre cada enlace */
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* Quita la línea de abajo (subrayado) */
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Animación suave */
+}
+
+nav a:hover {
+    color: #ff3b3b; /* Se pone rojo al pasar el mouse */
+}
+
+/* Estilo de la sección de Inicio (Hero) */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 30px auto; /* Centra el texto */
+    font-size: 1.1rem;
+}
+
+/* Estilo de tus botones de CV */
+.btn {
+    display: inline-block;
+    background-color: #e50000; /* Rojo tipo Persona */
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes un poco redondeados */
+    margin: 10px;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05); /* El botón crece un poquito al pasar el mouse */
+}
