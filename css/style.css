@@ -48,6 +48,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
@@ -362,9 +363,19 @@ nav a:hover {
     transition: all 0.2s ease;
 }
 
-.lightbox-nav:hover {
+/* Solo aplica hover en PC/dispositivos con mouse */
+@media (hover: hover) {
+    .lightbox-nav:hover {
+        background-color: var(--accent);
+        border-color: var(--accent);
+    }
+}
+
+/* En celular se ilumina solo mientras el dedo presiona el botón */
+.lightbox-nav:active {
     background-color: var(--accent);
     border-color: var(--accent);
+    transform: translateY(-50%) scale(0.95);
 }
 
 .lightbox-nav.prev { 
@@ -481,4 +492,33 @@ nav a:hover {
     opacity: 0.6;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
+}
+
+/* RESPONSIVE (CELULARES) */
+
+@media (max-width: 768px) {
+    header {
+        padding: 0.9rem 0;
+    }
+
+    nav ul {
+        gap: 10px 18px;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        padding: 4rem 1.2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid-proyectos,
+    .grid-servicios {
+        grid-template-columns: 1fr;
+    }
 }
