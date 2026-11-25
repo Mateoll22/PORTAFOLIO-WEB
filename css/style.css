@@ -1,4 +1,23 @@
-/* Reset básico */
+/* VARIABLES DE TEMA */
+:root {
+    /* Acento principal (Rojo estilo Persona) */
+    --accent: #e50000;
+    --accent-hover: #b80000;
+
+    /* Fondos */
+    --bg-light: #f8f9fa;      /* Fondo general claro */
+    --bg-surface: #ffffff;    /* Fondo blanco para contraste (Hero / Tarjetas) */
+    --bg-dark: #1a1a1a;       /* Header, pastillas y bloques oscuros */
+    --bg-dark-soft: #262626;  /* Fondo oscuro secundario (Sección Sobre mí) */
+
+    /* Textos */
+    --text-main: #222222;     /* Texto principal sobre fondos claros */
+    --text-muted: #555555;    /* Subtítulos y textos secundarios */
+    --text-light: #f8f9fa;    /* Texto sobre fondos oscuros */
+}
+
+/* RESET Y BASE */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,42 +25,51 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #f8f9fa; /* Un gris muy clarito y elegante */
-    color: #333; /* Texto gris oscuro */
+    background-color: var(--bg-light);
+    color: var(--text-main);
     line-height: 1.6;
 }
 
-/* Estilo del menú de navegación */
+/* NAVEGACIÓN */
+
 header {
-    background-color: #1a1a1a; /* Negro oscuro */
+    background-color: var(--bg-dark);
     padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
-    list-style: none; /* Quita puntos de la lista */
-    display: flex;    /* Pone los enlaces uno al lado del otro horizontalmente */
-    justify-content: center; /* Los centra en la pantalla */
-    gap: 30px; /* Espacio entre cada enlace */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none; /* Quita la línea de abajo (subrayado) */
+    color: var(--text-light);
+    text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
-    transition: color 0.3s ease; /* Animación suave */
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ff3b3b; /* Se pone rojo al pasar el mouse */
+    color: var(--accent);
 }
 
-/* Estilo de la sección de Inicio (Hero) */
+/*  SECCIÓN INICIO (HERO) */
+
 .hero {
     text-align: center;
     padding: 6rem 2rem;
-    background-color: #ffffff;
+    background-color: var(--bg-surface);
 }
 
 .hero h1 {
@@ -50,31 +78,407 @@ nav a:hover {
 }
 
 .hero h2 {
-    color: #666;
+    color: var(--text-muted);
     margin-bottom: 20px;
     font-weight: 400;
 }
 
 .hero p {
     max-width: 600px;
-    margin: 0 auto 30px auto; /* Centra el texto */
+    margin: 0 auto 30px auto;
     font-size: 1.1rem;
 }
 
-/* Estilo de tus botones de CV */
+/* Botones de CV */
+
 .btn {
     display: inline-block;
-    background-color: #e50000; /* Rojo tipo Persona */
-    color: white;
+    background-color: var(--accent);
+    color: var(--text-light);
     padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px; /* Bordes un poco redondeados */
+    border-radius: 5px;
     margin: 10px;
     font-weight: bold;
-    transition: transform 0.2s ease, background-color 0.2s;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .btn:hover {
-    background-color: #cc0000;
-    transform: scale(1.05); /* El botón crece un poquito al pasar el mouse */
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
+}
+
+/* SECCIÓN SOBRE MÍ */
+
+.sobre-mi {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--bg-dark-soft);
+    color: var(--text-light);
+}
+
+.sobre-mi h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sobre-mi h3 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.sobre-mi p {
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+    font-size: 1.05rem;
+    color: var(--text-light);
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.skills-list li {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skills-list li:hover {
+    background-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+/* SECCIÓN PROYECTOS */
+
+.proyectos {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--bg-surface);
+}
+
+.proyectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.proyecto-card {
+    background-color: var(--bg-light);
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-6px);
+    border-bottom-color: var(--accent);
+}
+
+.proyectos h3 {
+    margin-bottom: 12px;
+}
+
+.proyecto-card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.tags  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.proyecto-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-outline {
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 2px solid var(--bg-dark);
+    color: var(--bg-dark);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--text-light);
+}
+
+.badge-corporativo {
+    padding: 8px 16px;
+    border: 2px solid var(--text-muted);
+    color: var(--text-muted);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.proyecto-carousel {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    background-color: var(--bg-light);
+    cursor: zoom-in; /* zoom en imagen */
+}
+
+.proyecto-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.proyecto-carousel img.active {
+    opacity: 1;
+}
+
+/* ZOOM PARA IMAGENES */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 0.88);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lightbox.activo {
+    display: flex;
+}
+
+.lightbox-cerrar {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: none;
+    color: var(--text-light);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.lightbox-cerrar:hover {
+    background-color: var(--accent-hover);
+    transform: scale(1.1);
+}
+
+.lightbox-contenido {
+    position: relative;
+    display: inline-flex;
+    max-width: 82%;
+    max-height: 85vh;
+}
+
+.lightbox-contenido img {
+    max-width: 100%;
+    display: block;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-nav {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: rgba(26, 26, 26, 0.75); 
+    color: var(--text-light); 
+    border: 2px solid var(--text-light); 
+    width: 48px; 
+    height: 48px; 
+    border-radius: 50%; 
+    font-size: 1.4rem; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: all 0.2s ease;
+}
+
+.lightbox-nav:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.lightbox-nav.prev { 
+    left: 20px; 
+}
+
+.lightbox-nav.next { 
+    right: 20px; 
+}
+
+
+/* SECCIÓN SERVICIOS */
+
+.servicios {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: var(--bg-dark-soft);
+    color: var(--text-light);
+}
+
+.servicios h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.servicios .subtitulo {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.servicio-card {
+    background-color: var(--bg-dark);
+    padding: 30px 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-6px);
+}
+
+.servicio-card h3 {
+    margin-bottom: 15px;
+}
+
+.servicio-card p {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.servicio-card .btn {
+    margin-top: auto;
+    
+}
+
+/* SECCIÓN CONTACTOS */
+
+.contacto {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+}
+
+.contacto h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.contacto .subtitulo {
+    color: var(--text-light);
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.contacto-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 40px;
+}
+
+.contacto-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid var(--text-light);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.contacto-links a:hover {
+    background-color: var(--accent);
+    border-color: var(--accent) ;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
 }

@@ -16,6 +16,7 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav> 
@@ -23,13 +24,133 @@
     <!-- Sección principal (hero) -->
     <section id="inicio" class="hero">
         <h1>Angel Mateo Llugcha Rojas</h1>
-        <h2>Ingeniero de Software | UI/UX | Soporte de TI</h2>
-        <p>Bienvenido a mi portafolio personal. Aquí encontrarás información sobre mis habilidades, proyectos y cómo contactarme.</p>
+        <h2>Ingeniero de Software | Desarrollo Web & UI/UX | Automatización con IA</h2>
+        <p>Desarrollo sitios web modernos, automatizaciones con IA y soluciones de software enfocadas en la experiencia de usuario. Combino una visión técnica integral con diseño frontend para llevar proyectos reales a producción.</p>
         <!-- Botones de descarga del CV -->
-        <a href="assets/doc/CV Mateo Llugcha R..pdf" class="btn" target="_blank" download>Descargar CV </a>
-        <a href="assets/doc/Cv Mateo Llugcha Rojas..pdf" class="btn" target="_blank" download>Download CV </a>
+        <a href="assets/doc/CV Mateo Llugcha R.pdf" class="btn" target="_blank" download>Descargar CV </a>
+        <a href="assets/doc/Cv Mateo Llugcha Rojas.pdf" class="btn" target="_blank" download>Download CV </a>
+        <a href="#servicios" class="btn">Cotizar una Web</a>
     </section>
-
-    
+    <!-- Sección sobre mí -->
+    <section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>Soy Ingeniero de Software por la Universidad Internacional SEK (Quito, Ecuador), con experiencia en desarrollo web full-stack, diseño UI/UX, automatización con IA y soporte de infraestructura TI. He participado en el desarrollo de módulos web con PHP y MySQL, la automatización de respaldos corporativos a nivel nacional y la creación de asistentes virtuales con WhatsApp e inteligencia artificial. Disfruto construir tanto interfaces limpias para el usuario final como soluciones técnicas sólidas por detrás.</p>
+        <h3>Stack Tecnológico y Habilidades</h3>
+        <ul class="skills-list">
+            <li>HTML5, CSS3 & JavaScript</li>
+            <li>Python, PHP, C# & C++</li>
+            <li>SQL, MySQL & Supabase</li>
+            <li>n8n & Automatización con IA</li>
+            <li>APIs (REST, WhatsApp, Google)</li>
+            <li>Diseño UI/UX (Figma & Illustrator)</li>
+            <li>Soporte TI, Servidores & Redes</li>
+            <li>Windows, Linux & Git/GitHub</li>
+        </ul>
+    </section>
+    <!-- Sección proyectos -->
+    <section id="proyectos" class="proyectos">
+        <h2>Proyectos</h2>
+        <p class="subtitulo" >Explora algunos de mis proyectos más destacados.</p>
+        <!-- Contenido de los proyectos -->
+        <div class="grid-proyectos">
+            <article class="proyecto-card">
+                <h3>LIA (Asistente Virtual con IA)</h3>
+                <div class="proyecto-carousel">
+                    <img src="assets/img/lia-logo.jpeg" alt="lia-logo" class="active">
+                    <img src="assets/img/lia-1.png" alt="lia1">
+                    <img src="assets/img/lia-2.png" alt="lia2">
+                    <img src="assets/img/lia-3.png" alt="lia3">
+                    <img src="assets/img/lia-4.png" alt="lia4">
+                </div>
+                <p>Chatbot inteligente integrado con la API de WhatsApp para automatizar la atención y responder consultas de usuarios en tiempo real mediante procesamiento de lenguaje natural.</p>
+                <div class="tags">
+                    <span class="tag">GPT-4.1</span>
+                    <span class="tag">n8n</span>
+                    <span class="tag">Supabase</span>
+                    <span class="tag">WhatsApp API</span>
+                </div>
+                <div class="proyecto-links">
+                    <a href="https://github.com/Mateoll22/LIA-AI-WHATSAPP-ASSISTANT" class="btn-outline" target="_blank">Ver en GitHub</a>
+                </div>
+            </article>
+             <article class="proyecto-card">
+                <h3>KATSURI - Catálogo y Pedidos Web</h3>
+                <div class="proyecto-carousel">
+                    <img src="assets/img/katsuri-logo.jpeg" alt="katsuri-logo" class="active">
+                    <img src="assets/img/katsuri-menu.png" alt="menu">
+                    <img src="assets/img/katsuri-carrito.png" alt="carrito">
+                </div>
+                <p>Aplicación web responsiva para repostería artesanal con galería dinámica, modales interactivos para personalizar postres, carrito de compras y envío automático de pedidos a WhatsApp.</p>
+                <div class="tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="proyecto-links">
+                    <a href="https://github.com/Mateoll22/KATSURI-WEB" class="btn-outline" target="_blank">Ver en GitHub</a>
+                    <a href="https://katsuriec.netlify.app/" class="btn-outline" target="_blank">Ver Sitio Web</a>
+                </div>
+            </article>
+             <article class="proyecto-card">
+                <h3>Automatización de Respaldos Corporativos</h3>
+                <div class="proyecto-carousel">
+                    <img src="assets/img/coopad.jpg" alt="coopad-logo" class="active">
+                </div>
+                <p>Script desarrollado en Python e integrado con Cobian Backup para automatizar la ejecución y gestión de copias de seguridad corporativas a nivel nacional.</p>
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Cobian Backup</span>
+                    <span class="tag">Redes & TI</span>
+                </div>
+                <div class="proyecto-links">
+                    <span class="badge-corporativo">Proyecto Corporativo</span>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- Sección servicios -->
+     <section id="servicios" class="servicios">
+        <h2>Servicios Web</h2>
+        <p class="subtitulo">Soluciones digitales a medida para hacer crecer tu negocio</p>
+        <div class="grid-servicios">
+            <!-- Contenido de los servicios -->
+            <article class="servicio-card">
+                <h3>Catálogos y Menús Web con WhatsApp</h3>
+                <p>Tiendas y menús interactivos adaptados a celular con carrito de compras y pedidos automáticos directo a tu WhatsApp, sin pagar comisiones a terceros.</p>
+                <a class="btn" target="_blank" href="https://wa.me/593983400454?text=Hola%20Mateo,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar%20el%20servicio%20de%20Cat%C3%A1logos%20y%20Men%C3%BAs%20Web%20con%20WhatsApp%20para%20mi%20negocio">Cotizar por WhatsApp</a>
+            </article>
+            <article class="servicio-card">
+                <h3>Landing Pages y Sitios Corporativos</h3>
+                <p>Páginas web rápidas, modernas y 100% responsivas diseñadas para presentar tu marca, generar confianza y convertir visitantes en clientes.</p>
+                <a class="btn" target="_blank" href="https://wa.me/593983400454?text=Hola%20Mateo,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar%20el%20servicio%20de%20Landing%20Pages%20y%20Sitios%20Corporativos%20para%20mi%20negocio">Cotizar por WhatsApp</a>
+            </article>
+            <article class="servicio-card">
+                <h3>Automatización y Chatbots con IA</h3>
+                <p>Asistentes virtuales inteligentes conectados a WhatsApp y flujos automatizados para responder consultas de tus clientes 24/7 y ahorrar tiempo operativo.</p>
+                <a class="btn" target="_blank" href="https://wa.me/593983400454?text=Hola%20Mateo,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20cotizar%20el%20servicio%20de%20Automatizaci%C3%B3n%20y%20Chatbots%20con%20IA%20para%20mi%20negocio">Cotizar por WhatsApp</a>
+            </article>
+        </div>
+     </section>
+     <!-- Sección contacto -->
+    <footer id="contacto" class="contacto">
+        <h2>¿Trabajamos juntos?</h2>
+        <p class="subtitulo">Si tienes un proyecto en mente o necesitas ayuda con tu presencia digital, no dudes en contactarme.</p>
+            <div class="contacto-links">
+                <a target="_blank" href="https://wa.me/593983400454">WhatsApp</a>
+                <a target="_blank" href="mailto:mateollugcha@gmail.com">Correo Electrónico</a>
+                <a target="_blank" href="https://www.linkedin.com/in/mateo-llugcha/">LinkedIn</a>
+                <a target="_blank" href="https://github.com/Mateoll22">GitHub</a>
+            </div>
+        <p class="copyright">&copy; 2026 Angel Mateo Llugcha Rojas. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Vista Grande Proyecto -->
+     <div id="lightbox" class="lightbox">
+        <button id="lightbox-prev" class="lightbox-nav prev">&#10094;</button>
+            <div class="lightbox-contenido">
+                <img id="lightbox-img" src="" alt="Vista Ampliada">
+                <button id="lightbox-cerrar" class="lightbox-cerrar">&times;</button>
+            </div>
+            <button id="lightbox-next" class="lightbox-nav next">&#10095;</button>
+     </div>
 </body>
 </html>
